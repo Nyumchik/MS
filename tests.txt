@@ -1,0 +1,71 @@
+ls /bin
+/bin/cat
+/bin/date
+
+echo hello
+...
+
+exit 586 // %256
+exit vdav //255
+exit 58 79 //1
+exit // 1
+
+grep text
+^C
+echo $?   // 130
+
+/bin/ls hgvhg
+echo $? // 1
+
+echo $? + $?
+
+cat
+Ctrl + \ 
+echo $?   // 131
+
+cat
+Ctrl + C   //130
+
+cat
+Ctrl + D  //0
+
+echo "cat lol.c | cat > lol.c"
+echo 'cat lol.c | cat > lol.c'
+
+echo "'$USER'"
+echo '"$USER"'
+
+ls
+ls -l
+ls -la
+cd ..
+cd ~
+cd - 
+cd dir
+pwd
+
+
+этот блок последовательно
+#####
+'export' 'q'=e "w"=c e="h" r='o' 't'='x' "y"="p" u=r i=t
+'e'"x"p'o'r't' "t"$q's'$i='h'"e"'l'l$r
+$q'c'"h"o $test
+$lkjlkjllkdfs$q$w$e$r "$e"$q"l"'l'$r
+#####
+
+unset PATH
+export PATH= -//-
+
+cat Makefile | ls | wc -l
+
+echo hello > file
+< file cat
+echo hello >> file
+cat << stop >> file
+cat << stop | wc -l >> file
+
+false && echo "0" || echo "1"
+true && echo "0" || echo "1"
+
+cat ft*.c
+wc *.c
