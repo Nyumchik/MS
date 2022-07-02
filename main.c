@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 16:01:36 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 21:19:34 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 11:24:13 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,13 @@ char	*ft_main3(char *arg)
 		g_all.old_arg = ft_strdup(arg);
 		add_history(arg);
 	}
-	if (syn_error_check(arg, ';') < 0 || syn_backslash(arg))
+	if (!g_all.orand)
 	{
-		free(arg);
-		return (NULL);
+		if (syn_error_check(arg, ';') < 0 || syn_backslash(arg))
+		{
+			free(arg);
+			return (NULL);
+		}
 	}
 	executor(arg);
 	return (arg);

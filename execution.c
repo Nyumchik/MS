@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execution.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ujicama <ujicama@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 11:36:20 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 20:04:21 by ujicama          ###   ########.fr       */
+/*   Updated: 2022/07/02 11:26:13 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	exec_cmd(t_cmd *cmd, t_cmd *cmd2)
 		dup2(cmd->in, 0);
 		dup2(cmd->out, 1);
 		close_all(cmd2);
+		printf("cmd 0 - %s\n", cmd->cmd[0]);
 		if (ft_strchr(cmd->cmd[0], '/')
 			|| check_path(&cmd->cmd[0], find_key2("PATH", g_all.env)))
 		{
