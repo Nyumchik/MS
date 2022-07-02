@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 22:32:29 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 22:36:19 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:20:04 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ int	syn_error_check(char *str, char a)
 		i++;
 	if (str[i] == a || syn_error_util(str, a, &sq, &dq) < 0)
 	{
-		write(2, "syntax error\n", ft_strlen("syntax error\n"));
+		ft_putstr_fd("Minishell : syntax error\n", 2);
 		return (-1);
 	}
 	if (dq == -1 || sq == -1)
 	{
-		write(2, "quote error\n", ft_strlen("quote error\n"));
+		ft_putstr_fd("Minishell : quote error\n", 2);
 		return (-1);
 	}
 	return (0);

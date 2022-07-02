@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:00:55 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 21:26:37 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:31:02 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_exit(char **cmd)
 	if (!cmd[0])
 	{
 		printf("exit\n");
-		exit(1);
+		exit(0);
 	}
 	while (cmd[0][++i])
 	{
@@ -32,7 +32,7 @@ int	ft_exit(char **cmd)
 	}
 	if (cmd[1])
 	{
-		printf("exit: too many arguments\n");
+		ft_putstr_fd("exit: too many arguments\n", 2);
 		return (1);
 	}
 	printf("exit\n");
@@ -41,7 +41,7 @@ int	ft_exit(char **cmd)
 
 void	pr_error(void)
 {
-	printf("Minishell: No such file or directory\n");
+	ft_putstr_fd("Minishell : No such file or directory\n", 2);
 	g_all.exit_code = 127;
 }
 

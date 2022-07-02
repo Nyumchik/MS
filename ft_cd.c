@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:59:50 by gjohana           #+#    #+#             */
-/*   Updated: 2022/06/29 17:31:51 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:21:49 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,7 @@ int	handle_dot(char *path, char *ss)
 		pwd = getcwd(NULL, 0);
 		if (!ft_strncmp(path, ".", 2) && !pwd)
 		{
-			printf("cd: error retrieving current directory: getcwd: cannot ");
-			printf("access parent directories: No such file or directory\n");
+			print_here2();
 			g_all.exit_code = 0;
 			free(ss);
 			free(pwd);

@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:00:14 by gjohana           #+#    #+#             */
-/*   Updated: 2022/06/30 15:07:46 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:06:59 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	check_arg_env(char *s, int flag)
 	i = 0;
 	if (!ft_isalpha(s[0]) && s[0] != '_')
 	{
-		printf("Minishell: export: `%s': not a valid identifier\n", s);
+		printf("Minishell : export: `%s': not a valid identifier\n", s);
 		return (0);
 	}
 	while (s[i] && (ft_isalnum(s[i]) || s[i] == '_'))
@@ -60,7 +60,7 @@ int	check_arg_env(char *s, int flag)
 		return (1);
 	if (s[i] == '=')
 		return (2);
-	printf("Minishell: export: `");
+	printf("Minishell : export: `");
 	p_m = (s[i] == '=');
 	i = 0;
 	while (s[i] && ((s[i] != '=' && p_m) || !p_m))

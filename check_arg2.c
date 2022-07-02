@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 17:22:06 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 21:20:44 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 13:42:52 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,17 @@ char	**ft_split_shell(char *l, char no_splt)
 {
 	int		i;
 	char	**splt;
+	int		type;
 
 	i = -1;
+	while (++i < ft_strlen2(l))
+	{
+		type = (l[i] == '\'') + 2 * (l[i] == '\"');
+		while (type && ++i < ft_strlen2(l)
+			&& ((type == 1 && l[i] != '\'') || (type == 2 && l[i] != '\"')))
+			if (l[i] == no_splt)
+				l[i] = -2;
+	}
 	splt = ft_split(l, no_splt);
 	split_f(splt, no_splt);
 	return (splt);

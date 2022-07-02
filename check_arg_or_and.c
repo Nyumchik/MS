@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 17:27:49 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 14:10:19 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:06:26 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ char	*ft_or_and(char *line)
 		{
 			if (!g_all.no_init)
 			{
-				ft_putstr_fd(" Minishell: syntax error", 2);
+				ft_putstr_fd(" Minishell : syntax error", 2);
 				ft_putstr_fd(": unexpected end of file\n", 2);
 			}
 			g_all.no_init = 1;

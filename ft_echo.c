@@ -3,14 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_echo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ujicama <ujicama@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:59:22 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 18:06:02 by ujicama          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:22:00 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+void	print_here2(void)
+{
+	ft_putstr_fd("cd: error retrieving current directory: getcwd: cannot ", 2);
+	ft_putstr_fd("access parent directories: No such file or directory\n", 2);
+}
 
 void	print_all(char **cmd, int fd_out)
 {

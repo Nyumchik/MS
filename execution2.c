@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 11:49:12 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 12:07:51 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:06:34 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	exec_blt(t_cmd *cmd)
 
 int	print_check_error(char *str)
 {
-	ft_putstr_fd("Minishell: ", 2);
+	ft_putstr_fd("Minishell : ", 2);
 	ft_putstr_fd(str, 2);
 	ft_putstr_fd(": command not found\n", 2);
 	g_all.exit_code = 127;

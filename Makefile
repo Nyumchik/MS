@@ -13,7 +13,7 @@ HEADER	=	minishell.h
 
 CC		=	clang
 
-FLAGS	=	-Wall -Wextra -Werror
+FLAGS	=	-Wall -Wextra -Werror #-fsanitize=address -g
 
 READLINE = -lreadline
 
