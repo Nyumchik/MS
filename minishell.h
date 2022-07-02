@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 16:02:19 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/01 22:27:35 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 12:22:16 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,5 +153,6 @@ int					chaild_wait(int up_to);
 void				ft_norm2(char *line, int *a);
 void				pr_error(void);
 char				*join_p(char *p, char **s_path, int i, char **str);
+void				print_here2(void);
 
 #endif
