@@ -6,7 +6,7 @@
 /*   By: gjohana <gjohana@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 11:36:20 by gjohana           #+#    #+#             */
-/*   Updated: 2022/07/02 11:26:13 by gjohana          ###   ########.fr       */
+/*   Updated: 2022/07/02 11:39:57 by gjohana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	exec_cmd(t_cmd *cmd, t_cmd *cmd2)
 		dup2(cmd->in, 0);
 		dup2(cmd->out, 1);
 		close_all(cmd2);
-		printf("cmd 0 - %s\n", cmd->cmd[0]);
 		if (ft_strchr(cmd->cmd[0], '/')
 			|| check_path(&cmd->cmd[0], find_key2("PATH", g_all.env)))
 		{
@@ -79,7 +78,7 @@ int	exec_cmds(t_cmd *cmd, t_cmd *cmd2)
 			exec_cmd(cmd, cmd2);
 		else if (cmd->use && cmd->cmd[0] && !cmd->cmd[0][0])
 		{
-			ft_putstr_fd("Error : command not found\n", 2);
+			ft_putstr_fd("Minishell : command not found\n", 2);
 			g_all.exit_code = 127;
 		}
 		if (!cmd->next && !cmd->use)
